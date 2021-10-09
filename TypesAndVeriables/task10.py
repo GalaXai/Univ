@@ -1,2 +1,4 @@
-print("Hi whats yours name")
+print("Please write your name and Username")
 name = input()
+surname = input()
+print("Hi! " + name + surname)
