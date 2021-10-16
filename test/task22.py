@@ -1,12 +1,12 @@
 import random
-answer = random.randrange(1,6)
+answer = random.randrange(1, 6)
 guess = 0
 attempt = 3
 while guess != answer and attempt != 0:
     print("Guess the number 1-6")
-    #print(answer)
+    # print(answer)
     guess = int(input())
-    #print(guess)
+    # print(guess)
     attempt -= 1
 if guess == answer:
     print("Congratulations the number was {}".format(answer))
