@@ -17,13 +17,13 @@ class Redbull:
         for x in listR:
             sum += x.score
         wynik = sum/listR.__len__()
-        print(wynik)
+        print("Średnia ocena {:.1f}".format(wynik))
 
 
 listR = []
-watermelon = Redbull("watermelon", "red", 20)
-winteredition = Redbull("iceberry", "light blue", 5)
-blueberry = Redbull("blueberry", "blue", 1)
+watermelon = Redbull("watermelon", "red", 80)
+winteredition = Redbull("iceberry", "light blue", 70)
+blueberry = Redbull("blueberry", "blue", 70)
 
 
 Redbull.addRedbull(winteredition)
