@@ -4,7 +4,7 @@ for i in range(6, -1, -3):
         print(" {}".format(i+j), end='')
     print()
 i = 6
-print("#################################")
+print("#################################")  # for ==> while
 while i >= 0:
     j = 1
     while j <= 3:
