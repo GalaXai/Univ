@@ -1,5 +1,3 @@
-# VAT = 23%
-vat = 0.77
 print("Type in the price")
 ammount = float(input())
 price_wVat = ammount / 1.23
