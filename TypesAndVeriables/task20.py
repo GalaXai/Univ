@@ -1,5 +1,6 @@
-a = 3
-b = 4
-c = 5
-Pole = ((a+b+c)*(a+b-c)*(a-b+c)*(c+b-a))**(1/2)/4
-print("Area of the triangle is {}".format(Pole))
+print("Enter your height in cm:")
+height = int(input())
+print("Enter your weight in kg:")
+mass = int(input())
+bmi = mass / height / height * 10000
+print("Your Bmi is equal to {:.1f}".format(bmi))
