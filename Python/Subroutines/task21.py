@@ -1,4 +1,3 @@
-def bigger(x, y): return x > y
+bigger = lambda x,y: x>y
 
-
-print(bigger(3, 2))
+print(bigger(3,2))
