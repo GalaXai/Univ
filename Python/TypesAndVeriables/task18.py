@@ -1,5 +1,4 @@
-print("How tall are u in centimeters")
-cm = int(input())
+cm = int(input("How tall are u in centimeters: "))
 foot = cm / 30.48
 foot_1 = int(foot)
 foot_2 = (foot-foot_1)*10

@@ -1,4 +1,3 @@
-print("Please type two numbers")
-a = int(input())
-b = int(input())
+a = int(input("Enter a number: "))
+b = int(input("Enter a number: "))
 print(a+b)
