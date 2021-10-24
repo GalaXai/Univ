@@ -1,6 +1,5 @@
-print("Enter a and b")
-a = int(input())
-b = int(input())
+a = int(input("Enter a: "))
+b = int(input("Enter b: "))
 print("* "*b)
 for i in range(a-2):
     print("*" + " " * (2*b-3) + "*")

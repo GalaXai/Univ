@@ -1,5 +1,4 @@
-print("Enter the dog's age in human years")
-years = int(input())
+years = int(input("Enter the dog's age in human years: "))
 dogs_years = 0
 if years >= 2:
     dogs_years = 21

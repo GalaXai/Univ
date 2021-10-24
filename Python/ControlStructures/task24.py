@@ -1,7 +1,3 @@
-
-from sys import _xoptions
-
-
 def piramid(n):
     if n >= 0:
         for i in range(n+1):

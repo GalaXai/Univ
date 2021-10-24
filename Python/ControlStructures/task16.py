@@ -1,5 +1,5 @@
-x = int(input())
-y = int(input())
+x = int(input("Enter number: "))
+y = int(input("Enter number: "))
 
 list = []
 list.append(x)

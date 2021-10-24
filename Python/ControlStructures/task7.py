@@ -1,5 +1,4 @@
-print("Typy any integer ")
-x = int(input())
+x = int(input("Enter number: "))
 if x % 2 == 0:
     print("{} is even number".format(x))
 else:

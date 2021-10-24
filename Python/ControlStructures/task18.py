@@ -1,4 +1,4 @@
-pln = int(input())
+pln = int(input("Enter ammount: "))
 #pln = pln -(x*5)
 reszta = (pln % 5)
 x = (pln // 5)
