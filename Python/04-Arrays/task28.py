@@ -4,9 +4,9 @@ def numbersInAbBox(arrays):
         print("-",end='')
     print()
     for num in arrays:
-        print('|',num,end='')
+        x = 3-len(str(num))
+        print('|'+' '*x,num,end='')
     print('|')
     for i in range(len(arrays)*5):
         print("-",end='')
-    #-
 numbersInAbBox(numbers)
