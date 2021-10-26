@@ -4,8 +4,7 @@ def median(array):
         x = int(x/2)
         return (array[x-1] + array[x]) /2
     else:
-        x= x/2
-        return array[int(x)]
+        return array[int(x/2)]
 print(median([1,0,9,4,6]))
 print(median([6,8,3,1,0,5,7]))
 print(median([1,2,3,4,5,6]))
