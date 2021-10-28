@@ -4,5 +4,4 @@ def numbers_layout():
             print(" {}".format(i+j), end='')
         print()
 
-
 numbers_layout()
