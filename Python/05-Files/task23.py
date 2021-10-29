@@ -1,6 +1,6 @@
 import csv
-with open('Python/05-Files/students.txt.') as csv_file:
-    csv_file = csv.reader(csv_file, delimiter=',')
+with open('Python/05-Files/students.txt.') as file:
+    csv_file = csv.reader(file, delimiter=',')
     line_count = 0
     for row in csv_file:
         if line_count ==0:
