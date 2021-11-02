@@ -6,3 +6,8 @@ def sum(n):
 
 n = int(input())
 print(" Sum of numbers in range of {} is equal to {}".format(n,sum(n)))
+
+def sumOfIntegers(n):
+    return (n)*((n+1)/2)
+
+print(sumOfIntegers(n))
