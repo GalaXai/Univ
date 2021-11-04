@@ -4,4 +4,4 @@ def isPrime(num):
             return False
     return True
 
-isPrime(37)
+isPrime(2)
