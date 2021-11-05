@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Films>
+    <genre category = "Horror">
+        <title>Halloween Kills</title>
+        <year>2021</year>
+        <director>David Gordon Green</director>
+        <budget> 20 million$ </budget>
+        <actors>Nick Castle, Jamie Lee Curtis, Judy Greer, Andi Matichak, Anthony Michael Hall</actors>
+        <personal_rating>6</personal_rating>
+    </genre> 
+    <genre category = "Sci-Fi">
+        <title>Free Guy</title>
+        <year>2021</year>
+        <director>Shawn Levy</director>
+        <budget> 125 million$ </budget>
+        <actors>Ryan Reynolds, Jodie Comer, Chris Evans, Lil Rel Howery, Taika Waititi</actors>
+        <personal_rating>7</personal_rating>
+
+        <title>Interstellar</title>
+        <year>2014</year>
+        <director>Christopher Nolan</director>
+        <budget> 165 million$ </budget>
+        <actors>Matthew McConaughey, Mackenzie Foy, Bill Irwin, Jessica Chastain, Michael Caine</actors>
+        <personal_rating>9</personal_rating>
+    </genre>
+</Films>

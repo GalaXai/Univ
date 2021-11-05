@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ShoppingList>
+	<product category ="meat">
+		<name>ham</name>
+		<quantity unit="kg" cena="19zł/kg">0.5</quantity>
+	</product>
+	<product category = "vegetables">
+			<name>green beans</name>
+			<quantity unit="kg" cena="5zł/kg">1</quantity>
+			<name>potatoes</name>
+			<quantity unit="kg" cena="4zł/kg">2</quantity>
+	</product>	
+	<product category = "dairy">
+			<name>cheese</name>
+			<quantity unit="kg" cena="40zł/kg">0.2</quantity>
+			<name>eggs</name>
+			<quantity unit="pcs" cena="0.7/pcs">10</quantity>
+	</product>
+	<product category = "beverages">
+			<name>water</name>
+			<quantity unit="L" cena="1.5zł/L">2</quantity>
+			<name>coca cola</name>
+			<quantity unit="L" cena="5zł/L">1</quantity>
+			<name>orange juice</name>
+			<quantity unit="L" cena="4zł/L">1</quantity>
+	</product>
+</ShoppingList>
