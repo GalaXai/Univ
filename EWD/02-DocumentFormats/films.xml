@@ -22,5 +22,27 @@
         <budget> 165 million$ </budget>
         <actors>Matthew McConaughey, Mackenzie Foy, Bill Irwin, Jessica Chastain, Michael Caine</actors>
         <personal_rating>9</personal_rating>
+        
+        <title>The Martian</title>
+        <year>2015</year>
+        <director>Ridley Scott</director>
+        <budget> 108 million$ </budget>
+        <actors>Matt Damon, Sebastian Stan, Chiwetel Ejiofor, Donald Glover, Jessica Chastain</actors>
+        <personal_rating>7</personal_rating>
+    </genre>
+    <genre category="Action">
+        <title>Iron Man</title>
+        <year>2008</year>
+        <director>Jon Favreau</director>
+        <budget> 140 million$ </budget>
+        <actors>Robert Downey Jr., Stan Lee, Paul Bettany, Gwyneth Paltrow, Samuel L. Jackson</actors>
+        <personal_rating>9</personal_rating>
+
+        <title>Hulk</title>
+        <year>2003</year>
+        <director>Ang Lee</director>
+        <budget> 120 million$ </budget>
+        <actors>Stan Lee, Jennifer Connelly, Eric Bana, Nick Nolte, Sam Elliott</actors>
+        <personal_rating>6</personal_rating>
     </genre>
 </Films>
