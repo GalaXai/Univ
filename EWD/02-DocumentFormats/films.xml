@@ -3,46 +3,81 @@
     <genre category = "Horror">
         <title>Halloween Kills</title>
         <year>2021</year>
-        <director>David Gordon Green</director>
+        <director gender = "male">David Gordon Green</director>
         <budget> 20 million$ </budget>
-        <actors>Nick Castle, Jamie Lee Curtis, Judy Greer, Andi Matichak, Anthony Michael Hall</actors>
+        <actors>
+            <actor gender = "male">Nick Castle</actor>
+            <actor gender = "male">Jamie Lee Curtis</actor>
+            <actor gender = "women">Judy Greer</actor>
+            <actor gender = "women"> Andi Matichak</actor>
+            <actor gender = "male">Anthony Michael Hall</actor>
+        </actors>
         <personal_rating>6</personal_rating>
-    </genre> 
+    </genre>    
     <genre category = "Sci-Fi">
         <title>Free Guy</title>
         <year>2021</year>
-        <director>Shawn Levy</director>
+        <director gender = "male">Shawn Levy</director>
         <budget> 125 million$ </budget>
-        <actors>Ryan Reynolds, Jodie Comer, Chris Evans, Lil Rel Howery, Taika Waititi</actors>
+        <actors>
+            <actor gender = "male">Ryan Reynolds</actor>
+            <actor gender = "male">Jodie Comer</actor>
+            <actor gender = "male">Chris Evans</actor>
+            <actor gender = "male">Lil Rel Howery</actor>
+            <actor gender = "male">Taika Waititi</actor>
+    </actors>
         <personal_rating>7</personal_rating>
 
         <title>Interstellar</title>
         <year>2014</year>
-        <director>Christopher Nolan</director>
+        <director gender = "male">Christopher Nolan</director>
         <budget> 165 million$ </budget>
-        <actors>Matthew McConaughey, Mackenzie Foy, Bill Irwin, Jessica Chastain, Michael Caine</actors>
+        <actors>
+            <actor gender = "male">Matthew McConaughey</actor>
+            <actor gender = "male">Mackenzie Foy</actor>
+            <actor gender = "women">Jessica Chastain</actor>
+            <actor gender = "male">Bill Irwin</actor>
+            <actor gender = "women">Michael Caine</actor>
+        </actors>
         <personal_rating>9</personal_rating>
         
         <title>The Martian</title>
         <year>2015</year>
-        <director>Ridley Scott</director>
+        <director gender = "male">Ridley Scott</director>
         <budget> 108 million$ </budget>
-        <actors>Matt Damon, Sebastian Stan, Chiwetel Ejiofor, Donald Glover, Jessica Chastain</actors>
+        <actors>
+            <actor gender = "male">Matt Damon</actor>
+            <actor gender = "male">Sebastian Stan</actor>
+            <actor gender = "male">Chiwetel Ejiofor</actor>
+            <actor gender = "male">Donald Glover</actor>
+            <actor gender = "women">Jessica Chastain</actor>
+        </actors>
         <personal_rating>7</personal_rating>
     </genre>
     <genre category="Action">
         <title>Iron Man</title>
         <year>2008</year>
-        <director>Jon Favreau</director>
+        <director gender = "male">Jon Favreau</director>
         <budget> 140 million$ </budget>
-        <actors>Robert Downey Jr., Stan Lee, Paul Bettany, Gwyneth Paltrow, Samuel L. Jackson</actors>
+        <actors>
+            <actor gender = "male">Robert Downey Jr.</actor>
+            <actor gender = "male">Stan Lee</actor>
+            <actor gender = "male">Paul Bettany</actor>
+            <actor gender = "male">Gwyneth Paltrow</actor>
+            <actor gender = "male">Samuel L. Jackson</actor>
+        </actors>
         <personal_rating>9</personal_rating>
 
         <title>Hulk</title>
         <year>2003</year>
-        <director>Ang Lee</director>
+        <director gender = "male">Ang Lee</director>
         <budget> 120 million$ </budget>
-        <actors>Stan Lee, Jennifer Connelly, Eric Bana, Nick Nolte, Sam Elliott</actors>
+        <actors>
+            <actor gender = "male">Stan Lee</actor>
+            <actor gender = "women">Jennifer Connelly</actor>
+            <actor gender = "male">Eric Bana</actor>
+            <actor gender = "male">Nick Nolte</actor>
+            <actor gender = "male">Sam Elliott</actor>Stan Lee, Jennifer Connelly, Eric Bana, Nick Nolte, Sam Elliott</actors>
         <personal_rating>6</personal_rating>
     </genre>
 </Films>
