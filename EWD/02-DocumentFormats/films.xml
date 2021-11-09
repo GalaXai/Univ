@@ -12,7 +12,7 @@
             <actor gender = "women"> Andi Matichak</actor>
             <actor gender = "male">Anthony Michael Hall</actor>
         </actors>
-        <personal_rating>6</personal_rating>
+        <personal_rating>6/10</personal_rating>
     </genre>    
     <genre category = "Sci-Fi">
         <title>Free Guy</title>
@@ -21,13 +21,14 @@
         <budget> 125 million$ </budget>
         <actors>
             <actor gender = "male">Ryan Reynolds</actor>
-            <actor gender = "male">Jodie Comer</actor>
+            <actor gender = "women">Jodie Comer</actor>
             <actor gender = "male">Chris Evans</actor>
             <actor gender = "male">Lil Rel Howery</actor>
             <actor gender = "male">Taika Waititi</actor>
     </actors>
-        <personal_rating>7</personal_rating>
-
+        <personal_rating>7/10</personal_rating>
+    </genre>
+    <genre category = "Sci-Fi">
         <title>Interstellar</title>
         <year>2014</year>
         <director gender = "male">Christopher Nolan</director>
@@ -39,8 +40,9 @@
             <actor gender = "male">Bill Irwin</actor>
             <actor gender = "women">Michael Caine</actor>
         </actors>
-        <personal_rating>9</personal_rating>
-        
+        <personal_rating>9/10</personal_rating>
+    </genre>
+    <genre category = "Sci-Fi">    
         <title>The Martian</title>
         <year>2015</year>
         <director gender = "male">Ridley Scott</director>
@@ -52,7 +54,7 @@
             <actor gender = "male">Donald Glover</actor>
             <actor gender = "women">Jessica Chastain</actor>
         </actors>
-        <personal_rating>7</personal_rating>
+        <personal_rating>7/10</personal_rating>
     </genre>
     <genre category="Action">
         <title>Iron Man</title>
@@ -63,11 +65,12 @@
             <actor gender = "male">Robert Downey Jr.</actor>
             <actor gender = "male">Stan Lee</actor>
             <actor gender = "male">Paul Bettany</actor>
-            <actor gender = "male">Gwyneth Paltrow</actor>
+            <actor gender = "women">Gwyneth Paltrow</actor>
             <actor gender = "male">Samuel L. Jackson</actor>
         </actors>
-        <personal_rating>9</personal_rating>
-
+        <personal_rating>9/10</personal_rating>
+    </genre>
+     <genre category="Action">
         <title>Hulk</title>
         <year>2003</year>
         <director gender = "male">Ang Lee</director>
@@ -77,7 +80,8 @@
             <actor gender = "women">Jennifer Connelly</actor>
             <actor gender = "male">Eric Bana</actor>
             <actor gender = "male">Nick Nolte</actor>
-            <actor gender = "male">Sam Elliott</actor>Stan Lee, Jennifer Connelly, Eric Bana, Nick Nolte, Sam Elliott</actors>
-        <personal_rating>6</personal_rating>
+            <actor gender = "male">Sam Elliott</actor>
+        </actors>
+        <personal_rating>6/10</personal_rating>
     </genre>
 </Films>
