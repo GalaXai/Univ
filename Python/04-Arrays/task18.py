@@ -6,4 +6,4 @@ def BubbleSort(array):
     return array
    
 numbers = [4,3,5,1,2]
-print(BubbleSort(numbers)
+print(BubbleSort(numbers))
