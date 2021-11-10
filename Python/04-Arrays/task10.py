@@ -5,7 +5,7 @@ def sum(array):
     return sum_V
 def arr2str(array):
     string_ints = [str(int) for int in array]
-    string_ints = ' '.join(string_ints)
+    string_ints = ','.join(string_ints)
     return string_ints
 array = [4,3,7,1,3]
 print(sum(array))
