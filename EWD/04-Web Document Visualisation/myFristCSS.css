@@ -10,13 +10,30 @@ div.a {
 .backgroundv2
 {color:#000;background-color:#59d9fb} /*nice*/
 .button {
-  background-color: #4CAF50;
-  border: none;
   color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  width:50em;
+  position: relative;
+  height: 12em;
   font-size: 16px;
   margin: 4px 2px;
+  top: 25%;
+  left: 25%;
+}
+.button1 {
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width:50em;
+  position: relative;
+  height: 10em;
+  font-size: 16px;
+  margin: 4px 2px;
+  top: 25%;
+  left: 25%;
 }
