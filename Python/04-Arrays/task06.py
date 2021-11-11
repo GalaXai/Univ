@@ -10,4 +10,5 @@ wynik = 0
 for x in numbers:
     wynik+=x
 print(wynik/len(numbers))
+
 print(sum(numbers)/len(numbers))

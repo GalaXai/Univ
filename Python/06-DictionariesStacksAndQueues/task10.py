@@ -3,9 +3,8 @@
 ##
 stack = []
 # add value at the end of the stack
-def push(*args):
-    for num in args:
-        stack.append(num)
+def push(value):
+    stack.append(value)
     
 # remove the topmost element of the stack
 # and return its value    
