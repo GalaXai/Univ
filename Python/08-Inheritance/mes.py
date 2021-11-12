@@ -2,15 +2,11 @@ class Message():
     def __init__(self):
         self.message = ''
     
-    def set_message(self,message):
+    def write(self,Subject,message):
         x = message
         x = x.capitalize()
-        self.message = x + " BYE"
+        self.Subject = Subject.capitalize()
+        self.message = x + " bye"
 
     def __str__(self):
         return self.message
-
-if __name__ == '__main__':
-    m = Message()
-    m.set_message("hello")
-    print(m)
