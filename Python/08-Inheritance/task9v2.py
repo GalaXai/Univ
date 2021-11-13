@@ -1,4 +1,4 @@
-class book():
+class Book():
     def __init__(self, author, title, year):
         self.author = author
         self.title = title
@@ -6,7 +6,7 @@ class book():
 
 
 
-class pbook(book):
+class Pbook(Book):
     def __init__(self, author, title, year,numOfPages):
         super().__init__(author, title, year)
         self.numOfPages = numOfPages
@@ -16,7 +16,7 @@ class pbook(book):
 
 
 
-class ebook(book):
+class Ebook(Book):
     def __init__(self, author, title, year):
         super().__init__(author, title, year)
         self.file = author+".pdf"
@@ -26,7 +26,7 @@ class ebook(book):
 
 
 if __name__ == '__main__':
-    b0 = pbook("ME","GOOD BOOK",2012,9327)
+    b0 = Pbook("ME","GOOD BOOK",2012,9327)
     print(b0)
-    b1 = ebook("YOU","NOT BAD BOOK",2021)
+    b1 = Ebook("YOU","NOT BAD BOOK",2021)
     print(b1)

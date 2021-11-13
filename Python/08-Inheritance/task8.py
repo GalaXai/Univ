@@ -1,5 +1,5 @@
 import random
-class cell_Phone():
+class Cell_Phone():
     def __init__(self,name,os,producer):
         self.name = name
         self.os = os
@@ -14,5 +14,5 @@ class cell_Phone():
         return "{} has installed {} OS, made by {} has {}% battery".format(self.name,self.os,self.producer,self.battery)
 
 if __name__ == '__main__':
-    p0 = cell_Phone("GalaxyS10","Android12","Samsung")
+    p0 = Cell_Phone("GalaxyS10","Android12","Samsung")
     print(p0)
