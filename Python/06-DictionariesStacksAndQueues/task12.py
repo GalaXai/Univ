@@ -7,7 +7,7 @@ queue = []
 
 # add value at the queue
 def push(value):
-    queue.insert(-1,value)
+    queue.insert(0,value)
     
 # remove the first value in queue
 # and return its value    
@@ -27,13 +27,13 @@ def display():
         print(i, end=" ")
     print()
 
-display()
+push(1)
+push(2)
 push(3)
-push(7)
-push(5)
 display()
 pop()
 display()
 pop()
+display()
 pop()
 print(empty())
