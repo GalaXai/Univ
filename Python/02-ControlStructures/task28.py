@@ -1,9 +1,9 @@
 x = 0
 y = 1
-n = 15
+n = 5
 print(x)
 print(y)
-for i in range(n-1):
+for i in range(n-2):
     if n>=3:
         if i % 2 == 0:
             print(x+y)
@@ -31,4 +31,4 @@ def Fibonacci(n):
         elif n==0:
            return 0
     return x+y
-print(Fibonacci(6))
+#print(Fibonacci(6))
