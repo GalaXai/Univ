@@ -1,5 +1,4 @@
 import json
-from json import encoder
 book = {
     "Title": "Dżuma",
     "Author": "Albert Camus",
