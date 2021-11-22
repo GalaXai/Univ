@@ -18,6 +18,7 @@ class stats:
         return(sum(self.number)/len(self.number))
 
     def median(self):
+        self.number.sort()
         x=len(self.number)
         if x % 2 == 0:
             return((self.number[int(x/2)-1] + self.number[int((x/2))])/2)
