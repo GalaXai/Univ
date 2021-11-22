@@ -27,6 +27,10 @@ def display():
         print(i, end=" ")
     print()
 
+def firstInLine():
+    print(queue[-1])
+
+    
 push(1)
 push(2)
 push(3)
