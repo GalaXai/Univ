@@ -1,4 +1,5 @@
 def median(array):
+    array.sort() #uporządkowanym
     x = len(array)
     if x%2 == 0:
         x = int(x/2)
