@@ -1,6 +1,6 @@
 import json
 with open("06-DictionariesStacksAndQueues/api.nbp.pl.json" ,"r",encoding="UTF-8") as file:
-    with open("06-DictionariesStacksAndQueues/usd.json","w") as f:
+    with open("06-DictionariesStacksAndQueues/cenausd.json","w") as f:
             #json.dump("Date            Buying Rate     Selling Rate",f)
             #f.write('\n')
             #json.dump("============================================",f)
