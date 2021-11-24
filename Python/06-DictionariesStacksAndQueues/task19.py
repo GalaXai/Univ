@@ -15,48 +15,85 @@ operators = {
     "/": '/',
     "+": '+',
     "-": '-',
+    "=": '=',
 }
 #if input == number stack_number append
 #if input == operators stack_operators append
 #if input == "=" 
 #inp = input("Type in RPN notation: ")
 def reversepolishnation(inp):
-    stack_numbers=[]
-    stack_operators=[]
+    stack = []
     for i in inp:
         if i ==' ':
             pass
-        elif i in numbers.keys():
-            stack_numbers.append(numbers[i])
-        elif i in operators.keys():
-            stack_operators.append(i)
         else:
-            stack_operators.append(i)
-    print(stack_numbers)
-    print(stack_operators)
+            stack.append(i)
 
-    for op in stack_operators:
-        if op == "*":
-            x = stack_numbers.pop(-1)
-            y = stack_numbers.pop(-1)
-            stack_numbers.append(x*y)
-        elif op == "/":
-            x = stack_numbers.pop(-1)
-            y = stack_numbers.pop(-1)
-            stack_numbers.append(x/y)
-        elif op == "-":
-            x = stack_numbers.pop(-1)
-            y = stack_numbers.pop(-1)
-            stack_numbers.append(x-y)
-        elif op == "+":
-            x = stack_numbers.pop(-1)
-            y = stack_numbers.pop(-1)
-            stack_numbers.append(x+y)
-        elif op == "=":
-            x = stack_numbers.pop(-1)
-            return(x)
+
+    print(stack)
+    i=-1
+    while True:
+        i+=1
+        if stack[i] in operators:
+            if stack[i] == "*":
+                y = int(stack[i-1])
+                x = int(stack[i-2])
+                stack.pop(i-2)
+                stack.pop(i-2)
+                stack.pop(i-2)
+                stack.insert(i-2 , x*y)
+                i-=2
+            elif stack[i] == "/":
+                y = int(stack[i-1])
+                x = int(stack[i-2])
+                stack.pop(i-2)
+                stack.pop(i-2)
+                stack.pop(i-2)
+                stack.insert(i-2 , x/y)
+                i-=2
+            elif stack[i] == "-":
+                y = int(stack[i-1])
+                x = int(stack[i-2])
+                stack.pop(i-2)
+                stack.pop(i-2)
+                stack.pop(i-2)
+                stack.insert(i-2 , x-y)
+                i-=2
+            elif stack[i] == "+":
+                y = int(stack[i-1])
+                x = int(stack[i-2])
+                stack.pop(i-2)
+                stack.pop(i-2)
+                stack.pop(i-2)
+                stack.insert(i-2 , x+y)
+                i-=2
+            elif stack[i] == "=":
+                x = stack[i-1]
+                return(x)
+
+
+    #for op in stack_operators:
+    #    if op == "*":
+    #        x = stack_numbers.pop(-1)
+    #        y = stack_numbers.pop(-1)
+    #        stack_numbers.insert(0,x*y)
+    #    elif op == "/":
+    #        x = stack_numbers.pop(-1)
+    #        y = stack_numbers.pop(-1)
+    #        stack_numbers.insert(0,x/y)
+    #    elif op == "-":
+    #        x = stack_numbers.pop(-1)
+    #        y = stack_numbers.pop(-1)
+    #        stack_numbers.insert(0,x-y)
+    #    elif op == "+":
+    #        x = stack_numbers.pop(-1)
+    #        y = stack_numbers.pop(-1)
+    #        stack_numbers.insert(0,x+y)
+    #    elif op == "=":
+    #        x = stack_numbers.pop(-1)
+    #        return(x)
 print(reversepolishnation("2 3 + ="))
 print(reversepolishnation("2 4 1 + * ="))
 print(reversepolishnation("2 3 + 4 5 + * ="))
-print(reversepolishnation("8 3 1 + / 3 2 – 4 + * ="))
+print(reversepolishnation("8 3 1 + / 3 2 - 4 + * ="))
 
