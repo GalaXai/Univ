@@ -9,4 +9,4 @@ book = {
 }
 
 with open("Python/06-DictionariesStacksAndQueues/favorite.json" ,"w", encoding="utf-8") as file:
-    json.dump(book,file,ensure_ascii=False)
+    json.dump(book,file,indent=True,ensure_ascii=False)
