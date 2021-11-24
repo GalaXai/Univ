@@ -28,7 +28,13 @@ def reversepolishnation(inp):
             pass
         else:
             stack.append(i)
-
+    def popnumbers():
+        y = int(stack[i-1])
+        x = int(stack[i-2])
+        stack.pop(i-2)
+        stack.pop(i-2)
+        stack.pop(i-2)
+        return x,y
 
     print(stack)
     i=-1
@@ -36,62 +42,24 @@ def reversepolishnation(inp):
         i+=1
         if stack[i] in operators:
             if stack[i] == "*":
-                y = int(stack[i-1])
-                x = int(stack[i-2])
-                stack.pop(i-2)
-                stack.pop(i-2)
-                stack.pop(i-2)
+                x,y = popnumbers()
                 stack.insert(i-2 , x*y)
                 i-=2
             elif stack[i] == "/":
-                y = int(stack[i-1])
-                x = int(stack[i-2])
-                stack.pop(i-2)
-                stack.pop(i-2)
-                stack.pop(i-2)
+                x,y = popnumbers()
                 stack.insert(i-2 , x/y)
                 i-=2
             elif stack[i] == "-":
-                y = int(stack[i-1])
-                x = int(stack[i-2])
-                stack.pop(i-2)
-                stack.pop(i-2)
-                stack.pop(i-2)
+                x,y = popnumbers()
                 stack.insert(i-2 , x-y)
                 i-=2
             elif stack[i] == "+":
-                y = int(stack[i-1])
-                x = int(stack[i-2])
-                stack.pop(i-2)
-                stack.pop(i-2)
-                stack.pop(i-2)
+                x,y = popnumbers()
                 stack.insert(i-2 , x+y)
                 i-=2
             elif stack[i] == "=":
                 x = stack[i-1]
                 return(x)
-
-
-    #for op in stack_operators:
-    #    if op == "*":
-    #        x = stack_numbers.pop(-1)
-    #        y = stack_numbers.pop(-1)
-    #        stack_numbers.insert(0,x*y)
-    #    elif op == "/":
-    #        x = stack_numbers.pop(-1)
-    #        y = stack_numbers.pop(-1)
-    #        stack_numbers.insert(0,x/y)
-    #    elif op == "-":
-    #        x = stack_numbers.pop(-1)
-    #        y = stack_numbers.pop(-1)
-    #        stack_numbers.insert(0,x-y)
-    #    elif op == "+":
-    #        x = stack_numbers.pop(-1)
-    #        y = stack_numbers.pop(-1)
-    #        stack_numbers.insert(0,x+y)
-    #    elif op == "=":
-    #        x = stack_numbers.pop(-1)
-    #        return(x)
 print(reversepolishnation("2 3 + ="))
 print(reversepolishnation("2 4 1 + * ="))
 print(reversepolishnation("2 3 + 4 5 + * ="))
