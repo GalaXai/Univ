@@ -1,5 +1,5 @@
 import re
-with open('Python/05-Files/grades.txt.') as file:
+with open('05-Files/grades.txt.') as file:
     text = file.read()
     grades =  re.findall("\d[.]\d",text)
     sumOfGrades = 0

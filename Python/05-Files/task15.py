@@ -1,5 +1,5 @@
 def LinesInFile(filename):
-    with open('python/05-Files/{}.txt.'.format(filename)) as file:
+    with open('05-Files/{}.txt.'.format(filename)) as file:
         Line = 0
         for lines in file:
             Line +=1
