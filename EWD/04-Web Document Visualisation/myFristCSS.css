@@ -31,47 +31,33 @@ div.a {
 .backgroundv3
 {color:#000;background-color:#00b6b1}
 .button {
-  color: #fbfbfe;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
   display: block;
   width:50em;
   position: relative;
   height: 12em;
-  font-size: 16px;
-  margin: 4px 2px;
   top: 25%;
-  left: 25%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .button1 {
-  color: #fbfbfe;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
   display: block;
   width:50em;
   position: relative;
   height: 10em;
-  font-size: 16px;
-  margin: 4px 2px;
   top: 25%;
-  left: 25%;
+  left: 50%;
+transform: translateX(-50%);
 }
 .button2 {
-  color: #fbfbfe;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
   display: block;
   width:24em;
   position: relative;
   height: 5em;
-  font-size: 16px;
-  margin: 4px 2px;
   top: 25%;
-  left: 39%;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
 .tekst{
   color: #fbfbfe;
   text-shadow: 2px 2px 4px #000000;
