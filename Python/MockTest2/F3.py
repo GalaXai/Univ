@@ -2,7 +2,7 @@ import re
 def f3(t):
     output = 0
     #t == stirng:
-    x = re.findall("\d{2,}",t)
+    x = re.findall("\d{2,4}",t)
     for i in x:
         if len(i) > 3:
             x.remove(i)
