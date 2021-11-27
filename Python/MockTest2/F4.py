@@ -11,4 +11,4 @@ def f4(d):
                     output+=int(z)
                     break
     return output
-f4({"arr1":[2,6,5], "arr2":[7,1], "arr3":[2,9,8,1]})
+print(f4({"arr1":[2,6,5], "arr2":[7,1], "arr3":[2,9,8,1]}))
