@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>An array</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>An array</h1>
+		<script>
+			function getRandomInt(max) {
+  			return Math.floor(Math.random() * max) +1;
+				}
+			var myArray = []
+			// fill in the array with random values
+			// ...
+			for (i=1; i<=5;i++){
+				myArray.push(getRandomInt(5))
+			}
+			// check if the array is ordered
+			// ...
+			for (i=1; i<=4;i++){
+				if (myArray[i] < myArray[i+1]){
+					console.log("Array is not in order")	
+				}
+			}
+			// display the array and information in the console
+			// ...
+
+
+		</script>
+	</body>
+</html>
