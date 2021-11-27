@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create mobile phone</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Create mobile phone</h1>
+		<button onclick="display();" type="button">Display</button>
+		<script>
+			const system = {
+				name:  "iOS15",
+				battery:  "100%",
+				capacity: "256GB"
+			}
+			var mobilePhone = {
+				brand:	'Iphone 13',
+				year:	2021,
+				is_on:	false,
+				contacts:	["Mom","Friend","GF"],
+				system_info :  system['name'] + " " + system['battery'] + " " + system['capacity']
+			}
+			function display(){
+				window.alert("Brand= " + " " +mobilePhone.brand + "\n"
+				 +"Year="+ " " +String(mobilePhone.year) + "\n "
+				  +"Is on= "+ " " + String(mobilePhone.is_on)+ "\n "
+				   +"Contacts= "+ " " + mobilePhone.contacts + "\n "
+				    +"System information= " + " " + mobilePhone.system_info)
+			}
+			//string, number, boolean, array,object
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BMI</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>BMI calculator</h1>
+		<button type="button" onclick="BMICalc()">Run BMI calculator</button>
+		
+		<script>
+			function BMICalc(){
+				var BMI = {
+						weight: null,
+						height: null,
+						enterData: function(){
+							weight = prompt("Enter your weight in kg");
+							height = prompt("Enter your height in cm");
+							return weight,height
+							// enter weight and height, and assign them to the object properties
+						},
+						calculate: function(){
+							return Math.round(weight / (height*height) * 10000 *100)/100
+						},
+						display: function(){
+							window.alert("Your bmi is equal to " +" " +String(BMI.calculate()))
+							// display the result in a popup window
+						}
+				}
+				BMI.enterData()
+				BMI.display()
+				// call BMI methods
+				// ...
+			
+			}
+		</script>
+	</body>
+</html>

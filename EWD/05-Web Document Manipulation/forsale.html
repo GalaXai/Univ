@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Houses for sale</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Houses for sale</h1>
+		<script>
+			class house {
+				constructor (beds,adres,ph,price){
+					this.bedrooms = beds;
+					this.addres = adres;
+					this.phone = String(ph);
+					this.facilities = ["Bedroom","Kitchen","Bathroom"];
+					this.price = String(price);
+				}
+				changePrice(newPrice){
+					this.price = newPrice
+				}
+				addFacility(facility){
+					this.facilities.push(facility)
+				}
+				descripiton(){
+					return "Number of bedrooms: " +this.bedrooms + "\n" + "Facilities: " +
+					this.facilities + " \n" + "Price: " + this.price +"zł\n" + 
+					"Adresss: " + this.addres +"\nContact number: "
+					 + this.phone
+				}
+			}
+			const house1  = new house(1,"Here",56234123,150000);
+			house1.changePrice(100000)
+
+			console.log(house1.descripiton());
+		</script>
+	</body>
+</html>
