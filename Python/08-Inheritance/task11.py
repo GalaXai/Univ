@@ -5,7 +5,7 @@ class Student():
         self.surname= surname
         self.fieldOfStudy = fieldOfStudy
         self.id = Student.id_count
-        self.Univ = "UEK"
+        self.Univ = "AGH"
         Student.id_count +=1
     
     def __str__(self):

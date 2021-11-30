@@ -13,7 +13,7 @@ class Teacher(Person):
     def bye(self):
         print(f'And now {self.name} is telling you goodbye!')
         
-t = Teacher('Johnny','UEK')
+t = Teacher('Johnny','AGH')
 t.greet()
 t.say()
 t.bye()
