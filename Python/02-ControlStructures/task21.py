@@ -1,2 +1,2 @@
-university = "UEK w Krakowie"
+university = "# w Krakowie"
 print(' '.join(university))
