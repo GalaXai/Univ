@@ -12,7 +12,7 @@ print(person["hobby"])
 person["surname"] = "Nowak"
 person["married"] = False
 person["sex"] = "Male"
-person["hobby"].update("bicycle")
+person["hobby"].update({"bicycle"})
 person["phone"].update({"work":'313131444'})
 for key, value in person.items():
     print(key, "=",value)
