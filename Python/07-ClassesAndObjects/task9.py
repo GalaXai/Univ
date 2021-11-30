@@ -3,8 +3,8 @@ class University():
     # object constructor (__init__ method)
     def __init__(self):
         # object states/attributes (fields)
-        self.name = 'CUE'
-        self.full_name = "Crackow University of Economics"    
+        self.name = 'AGH'
+        self.full_name = "University of Science and Technology"    
     
     def set_name(self, name):
         self.name = name

@@ -3,7 +3,7 @@ class University():
     # object constructor (__init__ method)
     def __init__(self):
         # object states/attributes (fields)
-        self.name = 'CUE'    
+        self.name = 'AGH'    
     
     def set_name(self, name):
         self.name = name
