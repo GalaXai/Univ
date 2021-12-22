@@ -1,20 +1,19 @@
 from mail import Mail
 from sms import SMS
-from mes import Message
 
 class sendEmail(Mail):
    def __init__(self, Sender, Recipient):
        super().__init__(Sender, Recipient)
 
    def send(self):
-       print("""Sending Email...\nFrom: {}\nTo: {}\nSubject: {}\n{}""".format(self.From,self.To,self.Subject,self.message))
+       return Mail.send(self)
 
 class sendSMS(SMS):
     def __init__(self, Sender, Recipient):
         super().__init__(Sender, Recipient)
 
     def send(self):
-        print("""Sending SMS...\nFrom: {}\nTo: {}\nSubject: {}\n{}""".format(self.From,self.To,self.Subject,self.message))
+        return SMS.send(self)
 
 if __name__ == '__main__':
     x=sendSMS(11122333,999888777)
