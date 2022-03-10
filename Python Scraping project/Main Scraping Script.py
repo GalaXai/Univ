@@ -10,7 +10,7 @@ from numpy import append
 import requests
 import re
 #Code
-product_id = 117205811
+product_id = 55742508
 url =f"https://www.ceneo.pl/{product_id}/opinie-1"
 
 result = requests.get(url)
@@ -60,6 +60,7 @@ for count in range(1,51):
         id.append(x["data-entry-id"])
         if x["data-entry-id"] == id[0] and len(id)>1:
             error = True
+            id.pop(-1)
             break
         #Author name
         name = x.find(["span"],class_="user-post__author-name")
@@ -128,5 +129,5 @@ for count in range(1,51):
         continue
 
 
-for i in range(500):
+for i in range(len(id)):
     print(f"id {id[i]} author {author_name[i]} {stars[i]} {recomend[i]} {purchase[i]} {opinion_date[i]} {bought_date[i]} {review_up[i]} {review_down[i]} \n {message[i]} Wady {cons[i]} Zalety {pros[i]} ")
