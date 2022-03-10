@@ -5,29 +5,26 @@ from bs4 import BeautifulSoup
 import requests
 import json
 #Code
-product_id = 117205811
+product_id = 117205811 # for testing 55742508
 url =f"https://www.ceneo.pl/{product_id}/opinie-1"
 
 result = requests.get(url)
 doc = BeautifulSoup(result.text, "html.parser")
 #print(doc.prettify) #raw html
-#top_Product = doc.find(["div"] , class_="layout-wrapper product-top__wrapper")
 
+#Top price
+#top_Product = doc.find(["div"] , class_="layout-wrapper product-top__wrapper")
 #test = top_Product.find(["span"], class_="price-format nowrap")
-#print(test)
-#cena wyswietlana na top
+
+
 
 reviews = doc.find(["div"] ,class_="score-extend__review")
-#for test in opinions:
-#    print(test)
-# ilość opinii
+# Ammount of opinions
 reviews.contents
-#for test in reviews:
-#    print(test)
 print((reviews.contents))
-# 9-10 opini na strone max 50 stron
+# Max 50 pages of opinions
 
-#space for data
+#Declaring Tabales for Data
 id = []
 author_name = []
 stars = []
@@ -71,8 +68,7 @@ for count in range(1,51):
         #Stars
         star = x.find(["span"],class_="user-post__score-count")
         stars.append(star.contents[0])
-        #<div class="review-pz" title="Opinia została napisana przez użytkownika, który zakupił produkt."> <em>Opinia potwierdzona zakupem</em>
-        #test later 55742508
+        #Date + Opinion
         purch = x.find(["div"], class_="review-pz")
         if purch != []:
             purchase.append("True") 
