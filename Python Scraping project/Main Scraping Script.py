@@ -1,16 +1,11 @@
 #Using beatifullsoup4 and requests library
 #Doc https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 #Imports
-from ast import Pass
-from msilib.schema import Error
-from unicodedata import name
 from bs4 import BeautifulSoup
-from matplotlib.pyplot import contour, text, xcorr
-from numpy import append
 import requests
-import re
+import json
 #Code
-product_id = 55742508
+product_id = 117205811
 url =f"https://www.ceneo.pl/{product_id}/opinie-1"
 
 result = requests.get(url)
@@ -129,5 +124,21 @@ for count in range(1,51):
         continue
 
 
+#for i in range(len(id)):
+#    print(f"id {id[i]} author {author_name[i]} {stars[i]} {recomend[i]} {purchase[i]} {opinion_date[i]} {bought_date[i]} {review_up[i]} {review_down[i]} \n {message[i]} Wady {cons[i]} Zalety {pros[i]} ")
+
+#Saving to Files
+data = {
+    'Opinie': [
+    ]
+}
 for i in range(len(id)):
-    print(f"id {id[i]} author {author_name[i]} {stars[i]} {recomend[i]} {purchase[i]} {opinion_date[i]} {bought_date[i]} {review_up[i]} {review_down[i]} \n {message[i]} Wady {cons[i]} Zalety {pros[i]} ")
+    data['Opinie'].append({'id': id[i],'Author':author_name[i],'Ocena': stars[i],
+    'Poleca' :recomend[i],'Kupił': purchase[i], 'Data wystawienia opini': opinion_date[i],
+    'Data kupna': bought_date[i],'Przydatna opinia': review_up[i],
+    'Nieprzdatna opnia': review_down[i],'Treść wiadomości':  message[i],
+    'Wady': cons[i], 'Zalety': pros[i]})
+print(data)
+with open(f'json_data{product_id}.json',"w", encoding="utf-8") as json_file:
+    json.dump(data,json_file,indent=True,ensure_ascii=False)
+    print(data)
