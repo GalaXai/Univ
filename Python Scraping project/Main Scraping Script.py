@@ -17,10 +17,10 @@ doc = BeautifulSoup(result.text, "html.parser")
 
 #check for error 
 """ TODO
-    if error == 404:
+    error = doc.find(["div"],class_="error-page")
+    if error != empty:
     return bad_id()
-    elif error == 500 :
-    exited_id()
+    else: pass
 """
 
 #Top price
