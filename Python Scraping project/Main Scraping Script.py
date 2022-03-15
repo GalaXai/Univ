@@ -1,6 +1,9 @@
 #Using beatifullsoup4 and requests library
 #Doc https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 #Imports
+"""TODO
+    ADD Flask + Make it object
+"""
 from bs4 import BeautifulSoup
 import requests
 import json
@@ -11,6 +14,14 @@ url =f"https://www.ceneo.pl/{product_id}/opinie-1"
 result = requests.get(url)
 doc = BeautifulSoup(result.text, "html.parser")
 #print(doc.prettify) #raw html
+
+#check for error 
+""" TODO
+    if error == 404:
+    return bad_id()
+    elif error == 500 :
+    exited_id()
+"""
 
 #Top price
 #top_Product = doc.find(["div"] , class_="layout-wrapper product-top__wrapper")
@@ -46,6 +57,7 @@ for count in range(1,51):
     result =requests.get(url)
     doc = BeautifulSoup(result.text, "html.parser")
     test = doc.find(["div"],class_="js_product-reviews")
+    " check if there are opinons if test == [] then return error / break + error        TODO" 
     opinions = doc.find_all(["div"],class_="user-post user-post__card js_product-review")
     for x in opinions:
         #id
