@@ -52,6 +52,7 @@ pros = []
 #Scaraping the data
 count = 0
 error = False
+#Scraping Data Function
 for count in range(1,51):
     url =f"https://www.ceneo.pl/{product_id}/opinie-{count}"
     result =requests.get(url)
@@ -66,7 +67,7 @@ for count in range(1,51):
             error = True
             id.pop(-1)
             break
-        #Author name
+        #Author name 
         name = x.find(["span"],class_="user-post__author-name")
         author_name.append(name.contents[0].strip()) # strip to remove newline from ex.'\nm...1'
         #Recomend
@@ -140,6 +141,7 @@ data = {
     'Opinie': [
     ]
 }
+#Loading and sving data fuction
 for i in range(len(id)):
     data['Opinie'].append({'id': id[i],'Author':author_name[i],'Ocena': stars[i],
     'Poleca' :recomend[i],'Kupił': purchase[i], 'Data wystawienia opini': opinion_date[i],
