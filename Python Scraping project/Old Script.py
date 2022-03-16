@@ -1,27 +1,22 @@
 #Using beatifullsoup4 and requests library
 #Doc https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 #Imports
-"""TODO
-    ADD Flask + Make it object
-"""
 from bs4 import BeautifulSoup
 import requests
 import json
 #Code
-product_id = 117205811 # for testing 55742508
+product_id = 11123412 # for testing 55742508 , 117205811 , 11123412 no opinons
 url =f"https://www.ceneo.pl/{product_id}/opinie-1"
-
 result = requests.get(url)
 doc = BeautifulSoup(result.text, "html.parser")
 #print(doc.prettify) #raw html
 
 #check for error 
-""" TODO
-    error = doc.find(["div"],class_="error-page")
-    if error != empty:
-    return bad_id()
-    else: pass
-"""
+error = doc.find(["div"],class_="error-page")
+if error != None :
+    print(error)
+else: pass
+
 
 #Top price
 #top_Product = doc.find(["div"] , class_="layout-wrapper product-top__wrapper")
@@ -31,7 +26,10 @@ doc = BeautifulSoup(result.text, "html.parser")
 
 reviews = doc.find(["div"] ,class_="score-extend__review")
 # Ammount of opinions
-reviews.contents
+if reviews== None:
+    print("0 opini")
+    print("XD")
+
 print((reviews.contents))
 # Max 50 pages of opinions
 
@@ -58,7 +56,6 @@ for count in range(1,51):
     result =requests.get(url)
     doc = BeautifulSoup(result.text, "html.parser")
     test = doc.find(["div"],class_="js_product-reviews")
-    " check if there are opinons if test == [] then return error / break + error        TODO" 
     opinions = doc.find_all(["div"],class_="user-post user-post__card js_product-review")
     for x in opinions:
         #id
@@ -148,7 +145,6 @@ for i in range(len(id)):
     'Data kupna': bought_date[i],'Przydatna opinia': review_up[i],
     'Nieprzdatna opnia': review_down[i],'Treść wiadomości':  message[i],
     'Wady': cons[i], 'Zalety': pros[i]})
-print(data)
+
 with open(f'json_data{product_id}.json',"w", encoding="utf-8") as json_file:
     json.dump(data,json_file,indent=True,ensure_ascii=False)
-    print(data)
