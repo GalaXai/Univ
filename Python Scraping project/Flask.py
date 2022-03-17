@@ -4,13 +4,13 @@ app = Flask(__name__)
 
 @app.route('/') # home here we type in url
 def Home():
-   return render_template('Home.html')
+   return render_template('Home.html', error="")
    # enter bar  redirect(url_for("url", url="data"))
 
 
-@app.route('/error')
-def admin():
-   return "Valid Url"
+@app.route('/Error')
+def Error():
+   return render_template('Error.html')
 
 @app.route('/result',methods = ['POST', 'GET'])
 def Result():
@@ -18,10 +18,9 @@ def Result():
       result = request.form
       scrap = Scrapper(result['Id'])
       if scrap.error_test() == True:
-         return redirect(url_for("Home", error = "Valid"))
+         return render_template("Home.html" , error = "Valid ID")
       result = scrap.scraping_data()
       return render_template("Result.html",result = result , json = scrap.data_json())
-      # return render_template("script.py",result = result)
 
 @app.route('/<file>')
 def downloadFile(file):

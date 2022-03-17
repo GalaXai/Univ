@@ -1,24 +1,45 @@
 <!doctype html>
-<button type="button" ><a href={{json}}>Download JSON</a></button>
-<table border = 1>
-   <tr>
-      <th>id</th>
-      <th>author_name</th>
-      <th>stars</th>
-      <th>recomend</th>
-      <th>purchase</th>
-      <th>opinion_date</th>
-      <th>bought_date</th>
-      <th>review_up</th>
-      <th>review_down</th>
-      <th>message</th>
-      <th>cons</th>
-      <th>pros</th>
-    {% for x in (result['Opinie']) %}
-      <tr>
-      {%for key,value in x.items()%}
-         <td> {{ value }} </td>
-      {% endfor %}
-      </tr>
-    {% endfor %}
- </table>
+<head>
+   <link rel="stylesheet" href="css.css">
+   <style>
+       * {
+         box-sizing: border-box;
+       }
+       body {
+     margin: 0;
+     background-color: rgb(31, 31, 31);
+   }
+   </style>
+   <title>Ceneo Scrapper</title>
+</head>
+<div class = "topnav">
+   <a href={{json}}>Download JSON</a>
+   <a href={{json}}>Download CSV</a>
+   <a href={{json}}>Stats</a>
+</div>
+<div class="row">
+   <div class ="table">
+       <table id="worker">
+         <tr>
+            <th>id</th>
+            <th>author_name</th>
+            <th>stars</th>
+            <th>recomend</th>
+            <th>purchase</th>
+            <th>opinion_date</th>
+            <th>bought_date</th>
+            <th>review_up</th>
+            <th>review_down</th>
+            <th>message</th>
+            <th>cons</th>
+            <th>pros</th>
+         {% for x in (result['Opinie']) %}
+            <tr>
+            {%for key,value in x.items()%}
+               <td> {{ value }} </td>
+            {% endfor %}
+            </tr>
+         {% endfor %}
+      </div>
+   </div>
+</div>

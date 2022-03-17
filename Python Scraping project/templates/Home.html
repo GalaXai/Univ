@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html>
+    <head>
+    <link rel="stylesheet" href="css.css">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        body {
+      margin: 0;
+      background-color: rgb(31, 31, 31);
+    }
+    </style>
+    <title>Ceneo Scrapper</title>
+    </head>
     <form action = "http://localhost:5000/result" method = "POST">
-        <p>{{error}}</p>
-        <p>Id of the product <input type = "text" name = "Id" /></p>
-        <p><input type = "submit" value = "submit" /></p>
+        <div class ="row tekst">
+            <h1>{{error}}</h1>
+            <p>ID of the product</p>
+            <p><input type = "text" name = "Id" /></p>  <!--Ekstrakcja opinii-->
+            <p><input type = "submit" value = "submit" /></p>
+        </div>
      </form>
+     <div class ="row tekst">
+        <div class = "column">
+            <h1>About Author</h1>
+            <p>Im student...</p>
+        </div>
+        <div class = "column">
+            <h2>About app</h2>
+            <p>Cel i opis aplikacji</p>
+        </div>
+        <div class = "column">
+            <h3>tech used in app</h3>
+            <p>bilbioteki +  obiektowae</p>
+        </div>
+
+     </div>
+     <div class = "footer">
+         Made by Szymon Hawryluk
+     </div>
      <!-- • Widzę menu z dostępnymi opcjami:
         ➢ Ekstrakcja opinii
         ➢ Lista produktów
