@@ -135,7 +135,34 @@ class Scrapper:
         with open(f'json_data{self.id}.json',"w", encoding="utf-8") as json_file:
             json.dump(self.data,json_file,indent=True,ensure_ascii=False)
             return f"json_data{self.id}.json"
+    
+    def stats(self,data):
+        ammount  = len(data['Opinie'])
+        count = 0
+        bought = 0
+        rec = 0
+        ones = 0
+        twos = 0
+        thires = 0
+        fours = 0
+        fives = 0
+        for x in data['Opinie']:
+            count +=int(x['Ocena'][0])
+
+            if x ['Kupił'] == 'True':
+                bought +=1
+            if x['Poleca'] == "Polecam":
+                rec += 1
         
+        
+        
+        avg = count / ammount
+        avg = "{:.1f}".format(avg)
+        bought = bought /ammount * 100
+        rec = rec / ammount * 100
+        return data
+    
+    
     def test(self):
         product_id = self.id
         url =f"https://www.ceneo.pl/{product_id}/opinie-1"
