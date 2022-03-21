@@ -70,7 +70,7 @@ class Scrapper:
 
                 #Stars
                 star = x.find(["span"],class_="user-post__score-count")
-                stars.append(star.contents[0])
+                stars.append(star.contents[0][0])
                 #Date + Opinion
                 purch = x.find(["div"], class_="review-pz")
                 if purch != []:
@@ -126,43 +126,30 @@ class Scrapper:
             self.data['Opinie'].append({'id': id[i],'Author':author_name[i],'Ocena': stars[i],
             'Poleca' :recomend[i],'Kupił': purchase[i], 'Data wystawienia opini': opinion_date[i],
             'Data kupna': bought_date[i],'Przydatna opinia': review_up[i],
-            'Nieprzdatna opnia': review_down[i],'Treść wiadomości':  message[i],
+            'Nieprzydatna opinia': review_down[i],'Treść wiadomości':  message[i],
             'Wady': cons[i], 'Zalety': pros[i]})
         return self.data
 
     def data_json(self):
         import json
         with open(f'json_data{self.id}.json',"w", encoding="utf-8") as json_file:
-            json.dump(self.data,json_file,indent=True,ensure_ascii=False)
+            json.dump(self.data['Opinie'],json_file,indent=True,ensure_ascii=False)
             return f"json_data{self.id}.json"
     
-    def stats(self,data):
-        ammount  = len(data['Opinie'])
-        count = 0
-        bought = 0
-        rec = 0
-        ones = 0
-        twos = 0
-        thires = 0
-        fours = 0
-        fives = 0
-        for x in data['Opinie']:
-            count +=int(x['Ocena'][0])
+    
 
-            if x ['Kupił'] == 'True':
-                bought +=1
-            if x['Poleca'] == "Polecam":
-                rec += 1
-        
-        
-        
-        avg = count / ammount
-        avg = "{:.1f}".format(avg)
-        bought = bought /ammount * 100
-        rec = rec / ammount * 100
-        return data
-    
-    
+
+    def data_csv(self):
+        import csv 
+        import pandas as pd
+
+        with open(f'json_data{self.id}.json', encoding='utf-8') as inputfile:
+            df = pd.read_json(inputfile)
+
+        df.to_csv(f'json_data{self.id}.csv', encoding='utf-8', index=False)
+
+        return f"json_data{self.id}.csv"
+
     def test(self):
         product_id = self.id
         url =f"https://www.ceneo.pl/{product_id}/opinie-1"
