@@ -27,7 +27,9 @@ def Result():
       if scrap.error_test() == True:
          return render_template("Home.html" , error = "Valid ID")
       result = scrap.scraping_data()
-      return render_template("Result.html",result = result , json = scrap.data_json() ,csv=scrap.data_csv() ,stats = f'/charts/{id}')
+
+      fieldnames = [key for key in result['Opinie'][0].keys()]
+      return render_template("Result.html", json = scrap.data_json() ,csv=scrap.data_csv() ,stats = f'/charts/{id}',results=result['Opinie'],fieldnames=fieldnames , len = len )
 
 @app.route('/<file>')
 def downloadFile(file):
