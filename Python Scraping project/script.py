@@ -1,3 +1,6 @@
+
+
+
 class Scrapper:
     def __init__(self,id):
         self.id = id
@@ -18,7 +21,10 @@ class Scrapper:
         error = self.doc.find(["div"],class_="error-page")
         if error != None :
             return True
-        else: return False
+        elif self.doc.find(["div"],class_="js_product-reviews") == None:
+            return True
+        else:
+            return False
 
     def scraping_data(self):
         from bs4 import BeautifulSoup
@@ -48,7 +54,6 @@ class Scrapper:
             url =f"https://www.ceneo.pl/{self.id}/opinie-{count}"
             result =requests.get(url)
             doc = BeautifulSoup(result.text, "html.parser")
-            test = doc.find(["div"],class_="js_product-reviews")
             opinions = doc.find_all(["div"],class_="user-post user-post__card js_product-review")
             for x in opinions:
                 #id

@@ -1,11 +1,8 @@
-from pstats import Stats
 from flask import Flask, redirect, send_file , url_for ,render_template , request
 from script import Scrapper
-from Stats import create_dash_application
 import pandas as pd
 import plotly.express as px
 app = Flask(__name__)
-create_dash_application(app,id=55742508)
 
 
 @app.route('/') # home here we type in url
@@ -25,7 +22,7 @@ def Result():
       scrap = Scrapper(result['Id'])
       id = result['Id']
       if scrap.error_test() == True:
-         return render_template("Home.html" , error = "Valid ID")
+         return render_template("Home.html" , error = "Valid ID or There are not any reviews")
       result = scrap.scraping_data()
 
       fieldnames = [key for key in result['Opinie'][0].keys()]
