@@ -1,7 +1,6 @@
 from flask import Flask, redirect, send_file , url_for ,render_template , request
 from script import Scrapper
 import pandas as pd
-import plotly.express as px
 app = Flask(__name__)
 
 
@@ -26,7 +25,7 @@ def Result():
       result = scrap.scraping_data()
 
       fieldnames = [key for key in result['Opinie'][0].keys()]
-      return render_template("Result.html", json = scrap.data_json() ,csv=scrap.data_csv() ,stats = f'/charts/{id}',results=result['Opinie'],fieldnames=fieldnames , len = len )
+      return render_template("Result.html", json = scrap.data_json() ,csv=scrap.data_csv() ,stats = f'/{id}',results=result['Opinie'],fieldnames=fieldnames , len = len )
 
 @app.route('/<file>')
 def downloadFile(file):
@@ -34,8 +33,9 @@ def downloadFile(file):
     path = f'{file}'
     return send_file(path, as_attachment=True)
 
-@app.route("/charts/<int:id>")
+@app.route("/<int:id>/")
 def plots(id):
+   import json
    df = pd.read_json (f"json_data{id}.json")
    sum = []
    for i in df['Treść wiadomości']:
@@ -43,13 +43,33 @@ def plots(id):
    
    avg = df['Ocena'].sum() / len(df['Ocena'])
    avg = "{:.1f}".format(avg)
-   up = df['Przydatna opinia'].sum()
-   down = df['Nieprzydatna opinia'].sum()
-   fig1 = px.bar(df, x=df['Ocena'], y=[df['Przydatna opinia'],df['Nieprzydatna opinia']], title="Rozkład przydatnych i nieprzydanych opinii na ocenach")
-   fig2=px.pie(df, values=df['Ocena'], names=df['Ocena'],hole=.3, title= 'Rozkład Ocen')
-   fig1.show()
-   fig2.show()
-   return redirect(url_for("Home"))
+   
+   count= 0
+   for i in df['Przydatna opinia']:
+      count += int(i) 
+
+   count2= 0
+   for i in df['Nieprzydatna opinia']:
+      count2 += int(i) 
+
+   fives = 0
+   fours = 0 
+   thries = 0
+   twos = 0
+
+   for i in df['Ocena']:
+      i = int(i)
+      if i == 5:
+         fives +=1
+      if i == 4:
+         fours +=1
+      if i == 3:
+         thries +=1
+      if i == 2:
+         twos +=1
+   firstChart = {"Helpful Opinion": count, "Unhelpful opinion":count2}
+   secondChart = {"5":fives,"4":fours,"3":thries,"2":twos}
+   return render_template("Graphs.html", firstChartData =json.dumps(firstChart), secondChartData= json.dumps(secondChart))
 
 if __name__ == '__main__':
    app.run()

@@ -2292,6 +2292,31 @@
   ]
  },
  {
+  "id": "15874365",
+  "Author": "t...o",
+  "Ocena": "4",
+  "Poleca": "Polecam",
+  "Kupił": "True",
+  "Data wystawienia opini": "2022-03-25 23:39:18",
+  "Data kupna": "2022-03-20 15:00:13",
+  "Przydatna opinia": "0",
+  "Nieprzydatna opinia": "0",
+  "Treść wiadomości": "Jak zacznę używać, to będę mógł się wypowiedzieć ;) Na razie sprawdziłem czy działa. Działa :) Wygląda dobrze. Jednak myślałem, ze obsługa z aplikacji oferuje więcej niż tylko on/off :(",
+  "Wady": null,
+  "Zalety": [
+   "design",
+   "dobry wygląd",
+   "jakość wykonania",
+   "ładny wygląd",
+   "łatwość demontażu filtra",
+   "nowoczesny wygląd",
+   "pomiar pm 2.5",
+   "świetny design",
+   "wygląd",
+   "wyświetlacz oled"
+  ]
+ },
+ {
   "id": "14001739",
   "Author": "m...i",
   "Ocena": "5",
@@ -4054,20 +4079,6 @@
   "Zalety": null
  },
  {
-  "id": "11631784",
-  "Author": "Użytkownik Ceneo",
-  "Ocena": "5",
-  "Poleca": "Polecam",
-  "Kupił": "True",
-  "Data wystawienia opini": "2020-01-23 18:32:38",
-  "Data kupna": "2020-01-20 14:43:21",
-  "Przydatna opinia": "0",
-  "Nieprzydatna opinia": "0",
-  "Treść wiadomości": "Po dobie użytkowania jestem bardzo zadowolona. Wszystkie parametry podane w instrukcji są spełnione.",
-  "Wady": null,
-  "Zalety": null
- },
- {
   "id": "14071461",
   "Author": "m...i",
   "Ocena": "0",
@@ -4086,6 +4097,20 @@
    "wygląd",
    "wyświetlacz oled"
   ]
+ },
+ {
+  "id": "11631784",
+  "Author": "Użytkownik Ceneo",
+  "Ocena": "5",
+  "Poleca": "Polecam",
+  "Kupił": "True",
+  "Data wystawienia opini": "2020-01-23 18:32:38",
+  "Data kupna": "2020-01-20 14:43:21",
+  "Przydatna opinia": "0",
+  "Nieprzydatna opinia": "0",
+  "Treść wiadomości": "Po dobie użytkowania jestem bardzo zadowolona. Wszystkie parametry podane w instrukcji są spełnione.",
+  "Wady": null,
+  "Zalety": null
  },
  {
   "id": "11643013",
@@ -5464,6 +5489,20 @@
   "Przydatna opinia": "0",
   "Nieprzydatna opinia": "0",
   "Treść wiadomości": "Wszystko w porządku, bardzo dobrze wykonany, cichy, wydajny",
+  "Wady": null,
+  "Zalety": null
+ },
+ {
+  "id": "15855157",
+  "Author": "marcinmonkiewicz87*****",
+  "Ocena": "5",
+  "Poleca": "Polecam",
+  "Kupił": "True",
+  "Data wystawienia opini": "2022-03-22 15:41:02",
+  "Data kupna": "2022-03-18 14:20:57",
+  "Przydatna opinia": "0",
+  "Nieprzydatna opinia": "0",
+  "Treść wiadomości": "Dobra jakosc niska cwna. Polecam ten sprxet oraz ten sklep",
   "Wady": null,
   "Zalety": null
  },
@@ -8939,34 +8978,6 @@
   "Przydatna opinia": "0",
   "Nieprzydatna opinia": "0",
   "Treść wiadomości": "testujemy produkt",
-  "Wady": null,
-  "Zalety": null
- },
- {
-  "id": "11834551",
-  "Author": "Użytkownik Ceneo",
-  "Ocena": "5",
-  "Poleca": "Polecam",
-  "Kupił": "True",
-  "Data wystawienia opini": "2020-03-02 19:25:05",
-  "Data kupna": "2020-02-23 05:58:55",
-  "Przydatna opinia": "0",
-  "Nieprzydatna opinia": "0",
-  "Treść wiadomości": "Cichy i skuteczny.",
-  "Wady": null,
-  "Zalety": null
- },
- {
-  "id": "11625535",
-  "Author": "Użytkownik Ceneo",
-  "Ocena": "5",
-  "Poleca": "Polecam",
-  "Kupił": "True",
-  "Data wystawienia opini": "2020-01-22 19:13:14",
-  "Data kupna": "2020-01-03 22:53:28",
-  "Przydatna opinia": "0",
-  "Nieprzydatna opinia": "0",
-  "Treść wiadomości": "Działa jak należy.",
   "Wady": null,
   "Zalety": null
  }
