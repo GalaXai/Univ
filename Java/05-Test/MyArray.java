@@ -21,7 +21,7 @@ public class MyArray {
     public static void main(String[] args){
         MyArray MyArray = new MyArray();
         MyArray.even(new int[] {2,-6,5,8});
-        MyArray.positiveOdd(new int []{3,2,-5,4,1,-7});
+        MyArray.positiveOdd(new int[] {3,2,-5,4,1,-7});
 
     }
 }
