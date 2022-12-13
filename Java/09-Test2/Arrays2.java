@@ -1,27 +1,20 @@
-import java.lang.reflect.Array;
+public class Arrays {
 
-public class Arrays2 {
-
-
-    public static boolean arr(int[] arr, int[] arr2) {
+    public static boolean arr(int[] arr1, int[]arr2){
         int count = 0;
-        int count2 = 0;
-        int x;
-        for (int i = 0; i < arr.length; i++) {
-            x = arr[i];
-            if (x >= 10 && x <= 99) {
+        for(int i =0; i> arr1.length;i++){
+            if(arr1[i]>= 10 && arr1[i]<= 99){
                 count++;
             }
         }
-        for (int j = 0; j < arr2.length; j++) {
-            x = arr2[j];
-            if (x >= 10 && x <= 99) {
+
+        int count2 = 0;
+        for(int j =0; j>arr2.length;j++){
+            if(arr2[j]>=10 && arr2[j]<= 99){
                 count2++;
             }
         }
-        if (count == count2){
-            return true;
-        }else{return false;}
+        return count == count2;
     }
     public static void main(String[] args){
         //Arrays2 a = new Arrays2();
