@@ -49,4 +49,24 @@ public class CreditCardTests {
         assertThrows(CreditBelowLimitException.class,
                 () -> card.assignCreditLimit(BigDecimal.valueOf(100)));
     }
+    @Test
+    void itCantWithdrawMore(){
+        CreditCard card = new CreditCard("1");
+
+        card.assignCreditLimit(BigDecimal.valueOf(150));
+        card.withdraw(BigDecimal.valueOf(200));
+    }
+
+    @Test
+    void itCantWithdrawFromNone(){
+        CreditCard card = new CreditCard("1");
+        card.withdraw(BigDecimal.valueOf(200));
+    }
+
+    @Test
+    void test(){
+        BigDecimal a;
+        BigDecimal b = BigDecimal.valueOf(100);
+        System.out.println(a.compareTo(b));
+    }
 }
