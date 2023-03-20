@@ -64,9 +64,12 @@ public class CreditCardTests {
     }
 
     @Test
-    void test(){
-        BigDecimal a;
-        BigDecimal b = BigDecimal.valueOf(100);
-        System.out.println(a.compareTo(b));
+    void LiveTesting(){
+        CreditCard card = new CreditCard("1");
+        card.assignCreditLimit(BigDecimal.valueOf(200));
+        card.withdraw(BigDecimal.valueOf(100));
+        card.rePay(BigDecimal.valueOf(250));
+        card.assignCreditLimit(BigDecimal.valueOf(1000));
+        System.out.println(card.getBalance());
     }
 }
