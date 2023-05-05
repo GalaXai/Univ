@@ -2,15 +2,14 @@ package org.example.productkatalog;
 
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 public class ProductCatalog {
 
-    private ProductStorage productStorage;
+    ProductStorage productStorage;
 
-    public ProductCatalog(ProductStorage productStorage) {
+    public ProductCatalog(ProductStorage productStorage){
         this.productStorage = productStorage;
     }
 
@@ -18,31 +17,35 @@ public class ProductCatalog {
         return productStorage.allProducts();
     }
 
-    public String addProduct(String name, String desc){
-        Product newOne = new Product(
+
+    public String addProduct(String name, String desc) {
+        Product newOne = new Product (
                 UUID.randomUUID(),
                 name,
-                desc);
-        productStorage.add(newOne);
-
+                desc
+        );
+        this.productStorage.add(newOne);
         return newOne.getID();
     }
 
-
-    public Product loadByID(String productID){
-        return null;
+    public Product loadById(String productId) {
+        return productStorage.loadById(productId);
     }
-    public void changePrice(String productID, BigDecimal newPrice){
-        Product product = loadByID(productID);
+
+    public void changePrice(String productId, BigDecimal newPrice) {
+        Product product = loadById(productId);
+
         product.changePrice(newPrice);
     }
-    public void assignImage(String productID,String newImage){
-        Product product = loadByID(productID);
-        product.setImage(newImage);
+
+    public void assignImage(String productId, String imageKey) {
+        Product product = loadById(productId);
+
+        product.setImage(imageKey);
     }
 
-    public void publishProduct(String productID){
-        Product product = loadByID(productID);
+    public void publishProduct(String productId) {
+        Product product = loadById(productId);
 
         if (product.getImage() == null) {
             throw new ProductCantBePublishedException();
@@ -55,7 +58,8 @@ public class ProductCatalog {
         product.setOnline(true);
     }
 
-    public List<Product> allPublicProducts() {
+    public List<Product> allPublishedProducts() {
         return productStorage.allPublishedProducts();
     }
+
 }

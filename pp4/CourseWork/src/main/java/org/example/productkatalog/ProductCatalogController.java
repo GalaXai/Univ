@@ -6,14 +6,16 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class CatalogController {
-    private ProductCatalog productCatalog;
+public class ProductCatalogController {
 
-    CatalogController(ProductCatalog productCatalog){
-        this.productCatalog = productCatalog;
+    private ProductCatalog catalog;
+
+    public ProductCatalogController(ProductCatalog catalog){
+        this.catalog = catalog;
     }
+
     @GetMapping("/api/products")
     List<Product> allProducts(){
-        return productCatalog.allPublicProducts();
+        return catalog.allPublishedProducts();
     }
 }
